@@ -3,54 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Web Sitem</title>
+    <title>Mehmet'in Web Sitesi</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1b1e;
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .card {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 16px;
+            background-color: #162a2d;
+            padding: 35px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 255, 128, 0.15);
+            border: 1px solid #2e5a44;
+            max-width: 500px;
+            width: 100%;
         }
-        h1 { color: #00adb5; }
-        p { color: #aaaaaa; }
-        .btn {
+        h1 {
+            color: #00ff88;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .section-title {
+            color: #00ff88;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
             margin-top: 15px;
-            padding: 12px 24px;
-            background-color: #00adb5;
-            color: white;
+        }
+        .tag {
+            background-color: #204031;
+            color: #00ff88;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #00ff88;
+        }
+        .btn {
+            margin-top: 25px;
+            padding: 12px 28px;
+            background-color: #00ff88;
+            color: #0d1b1e;
             border: none;
-            border-radius: 8px;
+            border-radius: 25px;
             font-weight: bold;
+            font-size: 15px;
             cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #00cc6a;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h1>Merhaba, Ben Sitem 👋</h1>
-        <p>Yazılım geliştirmeye ve yeni teknolojiler keşfetmeye meraklı biriyim.</p>
+        <h1>Hoşgeldiniz canım arkadaşlarım Ben Mehmet 👋</h1>
         
-        <h3>İlgi Alanlarım</h3>
-        <p>💻 Kodlama | 🎮 Oyun | 📚 Bilim</p>
+        <p>23 Mart doğum günüm unutmayın diye başlıyorum, Elbistan Fen Lisesi'nde 11. sınıfa geçecek olan biriyim. Bu örnek için bir site çok zor oldu ama sizin için her şey, ne isterseniz ekleyeceğim buraya!</p>
+        
+        <div class="section-title">✨ Hakkımda & İlgi Alanlarım</div>
+        <div class="tags">
+            <span class="tag">🎮 MLBB Oynarım</span>
+            <span class="tag">📱 TikTok İzlerim</span>
+            <span class="tag">📸 Her zaman Insta'da Aktifim</span>
+            <span class="tag">💚 Bekarım</span>
+        </div>
 
-        <button class="btn" onclick="mesajGonder()">Bana Ulaş</button>
+        <button class="btn" onclick="kutlama()">Doğum Günümü Hatırlat 🎂</button>
     </div>
 
     <script>
-        function mesajGonder() {
-            alert("Mesajın alındı! Harika gidiyorsun.");
+        function kutlama() {
+            alert("23 Mart doğum günümü takvime eklemeyi unutma! 🎉");
         }
     </script>
 </body>
