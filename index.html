@@ -16,7 +16,7 @@
             justify-content: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 600px;
             width: 100%;
         }
         .card {
@@ -26,7 +26,7 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 255, 128, 0.15);
             border: 1px solid #2e5a44;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         h1 {
             color: #00ff88;
@@ -40,9 +40,9 @@
         }
         .section-title {
             color: #00ff88;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
             font-weight: bold;
         }
         .tags {
@@ -76,40 +76,46 @@
             background-color: #00cc6a;
             transform: translateY(-2px);
         }
-        /* GALERİ TASARIMI */
-        .gallery {
+        /* ALT ALTA GALERİ TASARIMI */
+        .gallery-vertical {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            flex-direction: column;
+            gap: 30px;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
+        .gallery-card {
+            background-color: #0d1b1e;
             border-radius: 15px;
             border: 2px solid #2e5a44;
+            overflow: hidden;
             transition: 0.3s;
-            max-width: 350px;
-            width: 100%;
+            text-align: left;
         }
-        .gallery-item:hover {
-            transform: scale(1.03);
+        .gallery-card:hover {
             border-color: #00ff88;
+            transform: translateY(-3px);
         }
-        .gallery-item img {
+        .gallery-card img {
             width: 100%;
             height: auto;
+            max-height: 450px;
+            object-fit: cover;
             display: block;
-            border-radius: 13px;
         }
-        .image-caption {
-            background: rgba(0, 0, 0, 0.7);
+        .gallery-info {
+            padding: 20px;
+        }
+        .gallery-name {
             color: #00ff88;
-            padding: 10px;
-            font-size: 14px;
-            text-align: center;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .gallery-desc {
+            color: #d1d1d1;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
         }
     </style>
 </head>
@@ -133,16 +139,57 @@
             <button class="btn" onclick="kutlama()">Doğum Günümü Hatırlat 🎂</button>
         </div>
 
-        <!-- FOTOĞRAF GALERİSİ -->
+        <!-- BEN VE ARKADAŞLARIM BÖLÜMÜ (ALT ALTA) -->
         <div class="card">
-            <div class="section-title">📸 Fotoğraflarım</div>
+            <div class="section-title">📸 Ben ve Arkadaşlarım</div>
             
-            <div class="gallery">
-                <!-- EKLENEN FOTOĞRAF -->
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/HLxXsJnX/photo.jpg" alt="Mehmet">
-                    <div class="image-caption">Mehmet'in Fotoğrafı 📸</div>
+            <div class="gallery-vertical">
+
+                <!-- 1. FOTOĞRAF: GALİP BUĞRA İSPİR -->
+                <div class="gallery-card">
+                    <img src="https://i.ibb.co/bgZB6MRp/photo.jpg" alt="Galip Buğra İspir">
+                    <div class="gallery-info">
+                        <div class="gallery-name">Galip Buğra İspir</div>
+                        <p class="gallery-desc">Adamın dibidir, BS max oynuyordu bir ara. Metro royale girerdik, hey gidi günler...</p>
+                    </div>
                 </div>
+
+                <!-- 2. FOTOĞRAF: FOMİŞİM -->
+                <div class="gallery-card">
+                    <img src="https://i.ibb.co/KpmzfLDR/photo.jpg" alt="Fomişim">
+                    <div class="gallery-info">
+                        <div class="gallery-name">Fomişim</div>
+                        <p class="gallery-desc">Papçi Fatih, adam çok tatlı. Hep elleşiyoruz ama sevgi ile, çok tatlı formam ya!</p>
+                    </div>
+                </div>
+
+                <!-- 3. FOTOĞRAF: ÇAĞAN -->
+                <div class="gallery-card">
+                    <img src="https://i.ibb.co/RfbtB5C/photo.jpg" alt="Çağan">
+                    <div class="gallery-info">
+                        <div class="gallery-name">Çağan</div>
+                        <p class="gallery-desc">Hep yiyor, Orkun Kökçü fanı. Niye Orkun aq neyse bu da böyle!</p>
+                    </div>
+                </div>
+
+                <!-- 4. FOTOĞRAF: BEN EFO KÜRŞAT AHMET -->
+                <div class="gallery-card">
+                    <img src="https://i.ibb.co/ycRWQ9zL/photo.jpg" alt="Ben Efo Kürşat Ahmet">
+                    <div class="gallery-info">
+                        <div class="gallery-name">Ben, Efo, Kürşat ve Ahmet</div>
+                        <p class="gallery-desc">Okulun son haftaları bir fotomuzdu...</p>
+                    </div>
+                </div>
+
+                <!-- 5. FOTOĞRAF: KÜRŞATLA BEN -->
+                <div class="gallery-card">
+                    <img src="https://i.ibb.co/7xvcxmTm/photo.jpg" alt="Kürşatla Ben">
+                    <div class="gallery-info">
+                        <div class="gallery-name">Kürşat'la Ben</div>
+                        <p class="gallery-desc">Çok datlı bir şey, Bruno'nun GS'ye geleceğini sanıyor garibanım. Çağan'dan aldığı tineri çekiyor!</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
